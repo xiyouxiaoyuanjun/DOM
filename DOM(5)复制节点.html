@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        var ul=document.querySelector('ul');
+        //1.复制节点node.cloneNode()
+        ul.children[0].cloneNode();
+        //2.添加节点
+        ul.appendChild(lili);
+
+        var lili=ul.children[0].cloneNode(true);
+        ul.appendChild(lili);
+
+
+    </script>
+</body>
+</html>

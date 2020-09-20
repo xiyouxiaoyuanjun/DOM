@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <span class='erweima'></span>
+    </div>
+    <script>
+        var erweima=document.querySelector('.erweima');
+
+       console.log( erweima.parentNode);
+
+    </script>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        var ul=document.querySelector('ul');
+        // console.log(ul.childNodes);//NodeList（9），换行也是节点
+        // console.log(ul.childNodes[0].nodeType);
+        // console.log(ul.childNodes[1].nodeType);
+        console.log(ul.children);//HTMLCollection(4)
+    </script>
+</body>
+</html>
