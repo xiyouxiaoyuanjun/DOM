@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        .suan{
+            width: 30px;
+            height: 15px;
+            background-color: darkgray;
+        }
+    </style>
 </head>
 <body>
-    
+    <input type="text" id="shuru"style="width:100px height=20px" >
+    <div id="suan">计算</div>
+    <h2 id="shuchu"></h2>
 </body>
+<script>
+    document.getElementById("suan").onclick=function(){
+    //    console.log("hell")
+       document.getElementById("shuchu").innerText=eval(document.getElementById("shuru").value)
+    }
+    // console.log(eval(str));
+</script>
 </html>

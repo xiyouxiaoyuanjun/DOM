@@ -8,6 +8,7 @@
 <body>
     <button>传统注册事件</button>
     <button>方法监听注册事件</button>
+    <button>attachEvent</button>
     <script>
         var btns=document.querySelectorAll('button');
         btns[0].onclick=function(){
@@ -21,6 +22,9 @@
         })
         btns[1].addEventListener('click',function(){
             alert('223');//先弹出222再弹出223
+        })
+        btns[2].atachEvent('onclick',function(){
+            alert('he');
         })
     </script>
 </body>
