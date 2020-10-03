@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color:aqua;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>盒子</div>
+    <div>盒子</div>
+    <div>盒子</div>
+     <script>
+        var divs=document.querySelectorAll('div');
+        //传统方法删除事件
+        divs[0].onclick=function(){
+            alert('一个盒子');
+            divs[0].onclick=null;
+        }
+        removeEventLinstener删除事件
+        divs[1].addEventListener=('click',fn);//fn不需要小括号
+        function fn() {
+            alert(22);
+            divs[1].removeEventListener('click',fn);
+        }
+        
+        divs[2].attachEvent('onclick',fn1);
+        function fn1(){
+            alert(33);
+            divs[2].detachEvent('onclick',fn1);
+        }
+        //删除事件兼容性解决方案
+        function removeEventLinstener(element,eventName,fn){
+            //
+            if(element.removeEventLinstener){
+                element.removeEventLinstener(eventName,fn);//第三个参数 默认是false
+            }else if(element.detachEvent){
+                element.detachEvent('on'+eventName,fn);
+            }else{
+                element['on'+eventName]=null;
+            }
+
+        }
+     </script>
+</body>
+</html>
