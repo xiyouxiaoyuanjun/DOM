@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 3000px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //鼠标事件对象MouseEvent
+        document.addEventListener('click',function(e){
+            //client获取鼠标在可视区的x，y坐标
+            console.log(e.clientX);
+            console.log(e.clientY);
+            console.log('------------------------------------');
+            
+            //page获取鼠标在页面文档的x，y坐标 
+            console.log(e.pagex);
+            console.log(e.pagey);
+            
+            
+            
+        })
+    </script>
+</body>
+</html>
